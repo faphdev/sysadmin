@@ -265,6 +265,9 @@ listen haproxy-stats 127.0.0.1:22002
 
 EOF
 
+# Install socat to let HAproxy work properly
+yum install socat
+
 # Enable and start HAProxy
 systemctl enable kazoo-haproxy
 systemctl start kazoo-haproxy
